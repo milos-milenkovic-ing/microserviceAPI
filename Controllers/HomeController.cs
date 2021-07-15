@@ -33,5 +33,15 @@ namespace WebApplication1.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        /// <summary>
+        /// Deletes a specific TodoItem.
+        /// </summary>
+        /// <param name="id"></param>        
+        [HttpDelete("{id}")]
+        public IActionResult Delete(long id)
+        {
+            return NoContent();
+        }
     }
 }
